@@ -3,7 +3,10 @@ import pandas as pd
 
 st.set_page_config(page_title="Swiggy Dashboard", layout="wide")
 
-df = pd.read_csv("./data/swiggy_clean.csv")
+import os
+
+file_path = os.path.join("data", "swiggy_clean.csv")
+df = pd.read_csv(file_path)
 
 # 👉 SIDEBAR FILTER
 st.sidebar.header("Filters")
